@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="sideNavOpened =! sideNavOpened">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>{{title}}</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [(opened)]="sideNavOpened">
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="container">
+      <div class="row">
+        <mat-toolbar>
+          <span>Promise</span>
+        </mat-toolbar>
+        <app-student-promise></app-student-promise>
+      </div>
+      <div class="row"><span>&#8203;</span></div>
+      <div class="row">
+        <mat-toolbar>
+          <span>Observable</span>
+        </mat-toolbar>
+        <app-student-observable></app-student-observable>
+      </div>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
